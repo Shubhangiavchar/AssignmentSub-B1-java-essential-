@@ -1,14 +1,21 @@
-package com.Odd;
-
+package com.SumofArray;
+import java.util.Arrays;
+import java.util.Scanner;
 public class Main {
+    public static void main(String args[]){
+            System.out.println("Enter the required size of the array :: ");
+            Scanner s = new Scanner(System.in);
+            int size = s.nextInt();
+            int myArray[] = new int [size];
+            int sum = 0;
+            System.out.println("Enter the elements of the array one by one ");
 
-    public static void main(String[] args) {
-     int arr[]={1,2,5,6,7};
-        System.out.println("Odd numbers:");
-        for(int i=0;i<arr.length;i++){
-            if(arr[i]%2!=0){
-                System.out.println(arr[i]);
+            for(int i=0; i<size; i++){
+                myArray[i] = s.nextInt();
+                sum = sum + myArray[i];
             }
+            System.out.println("Elements of the array are: "+Arrays.toString(myArray));
+            System.out.println("Sum of the elements of the array ::"+sum);
         }
     }
-}
+
